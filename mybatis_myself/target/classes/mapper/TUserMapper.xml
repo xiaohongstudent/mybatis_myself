@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.taolong.mybatis_myself.mapper.TUserMapper">
+
+	<select id="selectByPrimaryKey" resultType="com.taolong.mybatis_myself.bean.TUser">
+		select
+		id, user_name userName, real_name realName, sex, mobile, email, note
+		from t_user
+		where id =?
+	</select>
+	
+	<select id="selectAll" resultType="com.taolong.mybatis_myself.bean.TUser">
+		select
+		id, userName, realName, sex, mobile, email, note
+		from t_user
+	</select>
+	
+	
+	
+</mapper>
